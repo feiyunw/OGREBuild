@@ -1,4 +1,4 @@
-// © 2017 and later: Unicode, Inc. and others.
+//  2017 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 
 // stringoptions.h
@@ -125,7 +125,7 @@
  * (Uncased modifier letters are skipped.)
  * The difference in behavior is small for word titlecasing,
  * but the new adjustment is much better for whole-string and sentence titlecasing:
- * It yields "49ers" and "«丰(abc)»" instead of "49Ers" and "«丰(Abc)»".
+ * It yields "49ers" and "(abc)" instead of "49Ers" and "(Abc)".
  *
  * It is an error to specify multiple titlecasing adjustment options together.
  *

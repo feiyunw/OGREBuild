@@ -1,4 +1,4 @@
-// © 2017 and later: Unicode, Inc. and others.
+//  2017 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 
 #include "unicode/utypes.h"
@@ -38,7 +38,7 @@
  *     .rounding(Rounder::maxDigits(2))
  *     .locale(...)
  *     .format(1234)
- *     .toString();  // €1.2K in en-US
+ *     .toString();  // 1.2K in en-US
  *
  * // Create a formatter in a singleton for use later:
  * static const LocalizedNumberFormatter formatter = NumberFormatter::withLocale(...)
@@ -81,9 +81,9 @@
  * <p>
  * <ul>
  * <li>NARROW*: "$123.00" and "123 m"
- * <li>SHORT: "US$ 123.00" and "123 m"
+ * <li>SHORT: "US$123.00" and "123 m"
  * <li>FULL_NAME: "123.00 US dollars" and "123 meters"
- * <li>ISO_CODE: "USD 123.00" and undefined behavior
+ * <li>ISO_CODE: "USD123.00" and undefined behavior
  * <li>HIDDEN: "123.00" and "123"
  * </ul>
  *
@@ -99,7 +99,7 @@ typedef enum UNumberUnitWidth {
      * information on the difference between NARROW and SHORT, see SHORT.
      *
      * <p>
-     * In CLDR, this option corresponds to the "Narrow" format for measure units and the "¤¤¤¤¤" placeholder for
+     * In CLDR, this option corresponds to the "Narrow" format for measure units and the "" placeholder for
      * currencies.
      *
      * @draft ICU 60
@@ -111,11 +111,11 @@ typedef enum UNumberUnitWidth {
      * symbol when there may be ambiguity. This is the default behavior.
      *
      * <p>
-     * For example, in <em>es-US</em>, the SHORT form for Fahrenheit is "{0} °F", but the NARROW form is "{0}°",
+     * For example, in <em>es-US</em>, the SHORT form for Fahrenheit is "{0} F", but the NARROW form is "{0}",
      * since Fahrenheit is the customary unit for temperature in that locale.
      *
      * <p>
-     * In CLDR, this option corresponds to the "Short" format for measure units and the "¤" placeholder for
+     * In CLDR, this option corresponds to the "Short" format for measure units and the "" placeholder for
      * currencies.
      *
      * @draft ICU 60
@@ -126,7 +126,7 @@ typedef enum UNumberUnitWidth {
      * Print the full name of the unit, without any abbreviations.
      *
      * <p>
-     * In CLDR, this option corresponds to the default format for measure units and the "¤¤¤" placeholder for
+     * In CLDR, this option corresponds to the default format for measure units and the "" placeholder for
      * currencies.
      *
      * @draft ICU 60
@@ -138,7 +138,7 @@ typedef enum UNumberUnitWidth {
      * option is currently undefined for use with measure units.
      *
      * <p>
-     * In CLDR, this option corresponds to the "¤¤" placeholder for currencies.
+     * In CLDR, this option corresponds to the "" placeholder for currencies.
      *
      * @draft ICU 60
      */
@@ -1720,8 +1720,8 @@ class U_I18N_API NumberFormatterSettings {
      * <ul>
      * <li><em>en_US</em> symbols: "12,345.67"
      * <li><em>fr_FR</em> symbols: "12&nbsp;345,67"
-     * <li><em>de_CH</em> symbols: "12’345.67"
-     * <li><em>my_MY</em> symbols: "၁၂,၃၄၅.၆၇"
+     * <li><em>de_CH</em> symbols: "12345.67"
+     * <li><em>my_MY</em> symbols: ",."
      * </ul>
      *
      * <p>
@@ -1760,8 +1760,8 @@ class U_I18N_API NumberFormatterSettings {
      *
      * <ul>
      * <li>Latin numbering system: "12,345"
-     * <li>Myanmar numbering system: "၁၂,၃၄၅"
-     * <li>Math Sans Bold numbering system: "𝟭𝟮,𝟯𝟰𝟱"
+     * <li>Myanmar numbering system: ","
+     * <li>Math Sans Bold numbering system: ","
      * </ul>
      *
      * <p>
