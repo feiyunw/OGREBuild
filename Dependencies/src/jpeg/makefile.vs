@@ -132,44 +132,44 @@ clean:
 	$(RM) testout*
 
 setup-vc6:
-	ren jconfig.vc jconfig.h
-	ren makejdsw.vc6 jpeg.dsw
-	ren makeadsw.vc6 apps.dsw
-	ren makejmak.vc6 jpeg.mak
-	ren makejdep.vc6 jpeg.dep
-	ren makejdsp.vc6 jpeg.dsp
-	ren makecmak.vc6 cjpeg.mak
-	ren makecdep.vc6 cjpeg.dep
-	ren makecdsp.vc6 cjpeg.dsp
-	ren makedmak.vc6 djpeg.mak
-	ren makeddep.vc6 djpeg.dep
-	ren makeddsp.vc6 djpeg.dsp
-	ren maketmak.vc6 jpegtran.mak
-	ren maketdep.vc6 jpegtran.dep
-	ren maketdsp.vc6 jpegtran.dsp
-	ren makermak.vc6 rdjpgcom.mak
-	ren makerdep.vc6 rdjpgcom.dep
-	ren makerdsp.vc6 rdjpgcom.dsp
-	ren makewmak.vc6 wrjpgcom.mak
-	ren makewdep.vc6 wrjpgcom.dep
-	ren makewdsp.vc6 wrjpgcom.dsp
+	copy /Y jconfig.vc jconfig.h
+	copy /Y makejdsw.vc6 jpeg.dsw
+	copy /Y makeadsw.vc6 apps.dsw
+	copy /Y makejmak.vc6 jpeg.mak
+	copy /Y makejdep.vc6 jpeg.dep
+	copy /Y makejdsp.vc6 jpeg.dsp
+	copy /Y makecmak.vc6 cjpeg.mak
+	copy /Y makecdep.vc6 cjpeg.dep
+	copy /Y makecdsp.vc6 cjpeg.dsp
+	copy /Y makedmak.vc6 djpeg.mak
+	copy /Y makeddep.vc6 djpeg.dep
+	copy /Y makeddsp.vc6 djpeg.dsp
+	copy /Y maketmak.vc6 jpegtran.mak
+	copy /Y maketdep.vc6 jpegtran.dep
+	copy /Y maketdsp.vc6 jpegtran.dsp
+	copy /Y makermak.vc6 rdjpgcom.mak
+	copy /Y makerdep.vc6 rdjpgcom.dep
+	copy /Y makerdsp.vc6 rdjpgcom.dsp
+	copy /Y makewmak.vc6 wrjpgcom.mak
+	copy /Y makewdep.vc6 wrjpgcom.dep
+	copy /Y makewdsp.vc6 wrjpgcom.dsp
 
 setup-v15:
-	ren jconfig.vc jconfig.h
-	ren makejsln.v15 jpeg.sln
-	ren makeasln.v15 apps.sln
-	ren makejvcx.v15 jpeg.vcxproj
-	ren makejfil.v15 jpeg.vcxproj.filters
-	ren makecvcx.v15 cjpeg.vcxproj
-	ren makecfil.v15 cjpeg.vcxproj.filters
-	ren makedvcx.v15 djpeg.vcxproj
-	ren makedfil.v15 djpeg.vcxproj.filters
-	ren maketvcx.v15 jpegtran.vcxproj
-	ren maketfil.v15 jpegtran.vcxproj.filters
-	ren makervcx.v15 rdjpgcom.vcxproj
-	ren makerfil.v15 rdjpgcom.vcxproj.filters
-	ren makewvcx.v15 wrjpgcom.vcxproj
-	ren makewfil.v15 wrjpgcom.vcxproj.filters
+	copy /Y jconfig.vc jconfig.h
+	copy /Y makejsln.v15 jpeg.sln
+	copy /Y makeasln.v15 apps.sln
+	copy /Y makejvcx.v15 jpeg.vcxproj
+	copy /Y makejfil.v15 jpeg.vcxproj.filters
+	copy /Y makecvcx.v15 cjpeg.vcxproj
+	copy /Y makecfil.v15 cjpeg.vcxproj.filters
+	copy /Y makedvcx.v15 djpeg.vcxproj
+	copy /Y makedfil.v15 djpeg.vcxproj.filters
+	copy /Y maketvcx.v15 jpegtran.vcxproj
+	copy /Y maketfil.v15 jpegtran.vcxproj.filters
+	copy /Y makervcx.v15 rdjpgcom.vcxproj
+	copy /Y makerfil.v15 rdjpgcom.vcxproj.filters
+	copy /Y makewvcx.v15 wrjpgcom.vcxproj
+	copy /Y makewfil.v15 wrjpgcom.vcxproj.filters
 
 test:
 	IF EXIST testout* $(RM) testout*
