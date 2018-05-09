@@ -49,6 +49,9 @@
 [submodule "Dependencies/src/xz"]
 	path = Dependencies/src/xz
 	url = https://git.tukaani.org/xz.git
+[submodule "Dependencies/src/zziplib"]
+	path = Dependencies/src/zziplib
+	url = https://github.com/gdraheim/zziplib.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
