@@ -22,6 +22,9 @@
 [submodule "Dependencies/src/libwebp"]
 	path = Dependencies/src/libwebp
 	url = https://github.com/webmproject/libwebp.git
+[submodule "Dependencies/src/nedmalloc"]
+	path = Dependencies/src/nedmalloc
+	url = https://github.com/ned14/nedmalloc.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
