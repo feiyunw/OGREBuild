@@ -31,6 +31,9 @@
 [submodule "Dependencies/src/openexr"]
 	path = Dependencies/src/openexr
 	url = https://github.com/openexr/openexr.git
+[submodule "Dependencies/src/openjpeg"]
+	path = Dependencies/src/openjpeg
+	url = https://github.com/uclouvain/openjpeg.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
