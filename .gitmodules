@@ -16,6 +16,9 @@
 [submodule "Dependencies/src/libpng"]
 	path = Dependencies/src/libpng
 	url = https://github.com/glennrp/libpng.git
+[submodule "Dependencies/src/LibRaw"]
+	path = Dependencies/src/LibRaw
+	url = https://github.com/LibRaw/LibRaw.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
