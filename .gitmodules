@@ -43,6 +43,9 @@
 [submodule "Dependencies/src/tbb"]
 	path = Dependencies/src/tbb
 	url = https://github.com/01org/tbb.git
+[submodule "Dependencies/src/tinyxml2"]
+	path = Dependencies/src/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
