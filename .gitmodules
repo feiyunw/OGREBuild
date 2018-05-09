@@ -10,6 +10,9 @@
 [submodule "Dependencies/src/glsl-optimizer"]
 	path = Dependencies/src/glsl-optimizer
 	url = https://github.com/aras-p/glsl-optimizer.git
+[submodule "Dependencies/src/hlsl2glslfork"]
+	path = Dependencies/src/hlsl2glslfork
+	url = https://github.com/aras-p/hlsl2glslfork.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
