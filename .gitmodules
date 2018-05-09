@@ -13,6 +13,9 @@
 [submodule "Dependencies/src/hlsl2glslfork"]
 	path = Dependencies/src/hlsl2glslfork
 	url = https://github.com/aras-p/hlsl2glslfork.git
+[submodule "Dependencies/src/libpng"]
+	path = Dependencies/src/libpng
+	url = https://github.com/glennrp/libpng.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
