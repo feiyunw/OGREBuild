@@ -28,6 +28,9 @@
 [submodule "Dependencies/src/OIS"]
 	path = Dependencies/src/OIS
 	url = https://github.com/wgois/OIS.git
+[submodule "Dependencies/src/openexr"]
+	path = Dependencies/src/openexr
+	url = https://github.com/openexr/openexr.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
