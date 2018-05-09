@@ -19,6 +19,9 @@
 [submodule "Dependencies/src/LibRaw"]
 	path = Dependencies/src/LibRaw
 	url = https://github.com/LibRaw/LibRaw.git
+[submodule "Dependencies/src/libwebp"]
+	path = Dependencies/src/libwebp
+	url = https://github.com/webmproject/libwebp.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
