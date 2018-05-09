@@ -7,6 +7,9 @@
 [submodule "Dependencies/src/freetype2"]
 	path = Dependencies/src/freetype2
 	url = http://git.savannah.nongnu.org/r/freetype/freetype2.git
+[submodule "Dependencies/src/glsl-optimizer"]
+	path = Dependencies/src/glsl-optimizer
+	url = https://github.com/aras-p/glsl-optimizer.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
