@@ -4,6 +4,9 @@
 [submodule "Dependencies/src/cppunit"]
 	path = Dependencies/src/cppunit
 	url = https://anongit.freedesktop.org/git/libreoffice/cppunit.git
+[submodule "Dependencies/src/freetype2"]
+	path = Dependencies/src/freetype2
+	url = http://git.savannah.nongnu.org/r/freetype/freetype2.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
