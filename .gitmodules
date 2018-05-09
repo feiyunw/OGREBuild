@@ -46,6 +46,9 @@
 [submodule "Dependencies/src/tinyxml2"]
 	path = Dependencies/src/tinyxml2
 	url = https://github.com/leethomason/tinyxml2.git
+[submodule "Dependencies/src/xz"]
+	path = Dependencies/src/xz
+	url = https://git.tukaani.org/xz.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
