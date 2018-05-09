@@ -34,6 +34,9 @@
 [submodule "Dependencies/src/openjpeg"]
 	path = Dependencies/src/openjpeg
 	url = https://github.com/uclouvain/openjpeg.git
+[submodule "Dependencies/src/openssl"]
+	path = Dependencies/src/openssl
+	url = https://github.com/openssl/openssl.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
