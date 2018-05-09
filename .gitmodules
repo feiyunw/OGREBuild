@@ -37,6 +37,9 @@
 [submodule "Dependencies/src/openssl"]
 	path = Dependencies/src/openssl
 	url = https://github.com/openssl/openssl.git
+[submodule "Dependencies/src/poco"]
+	path = Dependencies/src/poco
+	url = https://github.com/pocoproject/poco.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
