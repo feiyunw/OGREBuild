@@ -40,6 +40,9 @@
 [submodule "Dependencies/src/poco"]
 	path = Dependencies/src/poco
 	url = https://github.com/pocoproject/poco.git
+[submodule "Dependencies/src/tbb"]
+	path = Dependencies/src/tbb
+	url = https://github.com/01org/tbb.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
