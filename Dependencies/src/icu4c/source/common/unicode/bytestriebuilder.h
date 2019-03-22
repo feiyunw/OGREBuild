@@ -1,4 +1,4 @@
-//  2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -143,7 +143,7 @@ private:
     virtual int32_t getMaxLinearMatchLength() const { return BytesTrie::kMaxLinearMatchLength; }
 
     /**
-     * @internal
+     * @internal (private)
      */
     class BTLinearMatchNode : public LinearMatchNode {
     public:

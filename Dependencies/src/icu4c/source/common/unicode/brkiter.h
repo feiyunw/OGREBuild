@@ -1,4 +1,4 @@
-//  2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 ********************************************************************************
@@ -638,7 +638,7 @@ protected:
 
 private:
 
-    /** @internal */
+    /** @internal (private) */
     char actualLocale[ULOC_FULLNAME_CAPACITY];
     char validLocale[ULOC_FULLNAME_CAPACITY];
 };

@@ -1,4 +1,4 @@
-//  2017 and later: Unicode, Inc. and others.
+// © 2017 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 
 // stringoptions.h
@@ -39,8 +39,6 @@
  */
 #define U_FOLD_CASE_EXCLUDE_SPECIAL_I 1
 
-#ifndef U_HIDE_DRAFT_API
-
 /**
  * Titlecase the string as a whole rather than each word.
  * (Titlecase only the character at index 0, possibly adjusted.)
@@ -50,7 +48,7 @@
  * including both an options bit and an explicit BreakIterator.
  *
  * @see U_TITLECASE_ADJUST_TO_CASED
- * @draft ICU 60
+ * @stable ICU 60
  */
 #define U_TITLECASE_WHOLE_STRING 0x20
 
@@ -63,11 +61,9 @@
  * including both an options bit and an explicit BreakIterator.
  *
  * @see U_TITLECASE_ADJUST_TO_CASED
- * @draft ICU 60
+ * @stable ICU 60
  */
 #define U_TITLECASE_SENTENCES 0x40
-
-#endif  // U_HIDE_DRAFT_API
 
 /**
  * Do not lowercase non-initial parts of words when titlecasing.
@@ -112,8 +108,6 @@
  */
 #define U_TITLECASE_NO_BREAK_ADJUSTMENT 0x200
 
-#ifndef U_HIDE_DRAFT_API
-
 /**
  * Adjust each titlecasing BreakIterator index to the next cased character.
  * (See the Unicode Standard, chapter 3, Default Case Conversion, R3 toTitlecase(X).)
@@ -125,12 +119,12 @@
  * (Uncased modifier letters are skipped.)
  * The difference in behavior is small for word titlecasing,
  * but the new adjustment is much better for whole-string and sentence titlecasing:
- * It yields "49ers" and "(abc)" instead of "49Ers" and "(Abc)".
+ * It yields "49ers" and "«丰(abc)»" instead of "49Ers" and "«丰(Abc)»".
  *
  * It is an error to specify multiple titlecasing adjustment options together.
  *
  * @see U_TITLECASE_NO_BREAK_ADJUSTMENT
- * @draft ICU 60
+ * @stable ICU 60
  */
 #define U_TITLECASE_ADJUST_TO_CASED 0x400
 
@@ -141,7 +135,7 @@
  * @see CaseMap
  * @see Edits
  * @see Normalizer2
- * @draft ICU 60
+ * @stable ICU 60
  */
 #define U_EDITS_NO_RESET 0x2000
 
@@ -153,11 +147,9 @@
  * @see CaseMap
  * @see Edits
  * @see Normalizer2
- * @draft ICU 60
+ * @stable ICU 60
  */
 #define U_OMIT_UNCHANGED_TEXT 0x4000
-
-#endif  // U_HIDE_DRAFT_API
 
 /**
  * Option bit for u_strCaseCompare, u_strcasecmp, unorm_compare, etc:

@@ -1,4 +1,4 @@
-//  2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 *******************************************************************************
@@ -189,8 +189,6 @@ uenum_openFromStringEnumeration(icu::StringEnumeration* adopted, UErrorCode* ec)
 U_STABLE UEnumeration* U_EXPORT2
 uenum_openUCharStringsEnumeration(const UChar* const strings[], int32_t count,
                                  UErrorCode* ec);
-
-/* Note:  next function is not hidden as draft, as it is used internally (it was formerly an internal function). */
 
 /**
  * Given an array of const char* strings (invariant chars only), return a UEnumeration.  String pointers from 0..count-1 must not be null.

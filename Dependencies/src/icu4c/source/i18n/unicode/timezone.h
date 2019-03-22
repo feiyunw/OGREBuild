@@ -1,4 +1,4 @@
-//  2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*************************************************************************
 * Copyright (c) 1997-2016, International Business Machines Corporation
@@ -283,6 +283,8 @@ public:
      * user. This method does not update the current ICU's default,
      * and may return a different TimeZone from the one returned by
      * TimeZone::createDefault().
+     *
+     * <p>This function is not thread safe.</p>
      *
      * @return  A new instance of TimeZone detected from the current host system
      *          configuration.

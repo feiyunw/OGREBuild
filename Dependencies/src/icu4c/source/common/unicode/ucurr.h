@@ -1,4 +1,4 @@
-//  2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -60,6 +60,7 @@ enum UCurrencyUsage {
     UCURR_USAGE_COUNT=2
 #endif  // U_HIDE_DEPRECATED_API
 };
+/** Currency Usage used for Decimal Format */
 typedef enum UCurrencyUsage UCurrencyUsage; 
 
 /**

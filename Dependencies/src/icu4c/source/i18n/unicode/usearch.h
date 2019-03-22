@@ -1,4 +1,4 @@
-//  2016 and later: Unicode, Inc. and others.
+// © 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
 **********************************************************************
@@ -257,10 +257,9 @@ typedef enum {
      * match an e with the same diacritic or a plain e in the searched text.
      *
      * This option is similar to "asymmetric search" as described in
-     * <a href="http://www.unicode.org/reports/tr10/#Asymmetric_Search">
-     * UTS #10 Unicode Collation Algorithm</a, but also allows unmarked
-     * characters in the searched text to match marked or unmarked versions of
-     * that character in the pattern.
+     * [UTS #10 Unicode Collation Algorithm](http://www.unicode.org/reports/tr10/#Asymmetric_Search),
+     * but also allows unmarked characters in the searched text to match
+     * marked or unmarked versions of that character in the pattern.
      *
      * @stable ICU 4.4
      */

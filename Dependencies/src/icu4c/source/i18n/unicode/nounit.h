@@ -1,4 +1,4 @@
-//  2017 and later: Unicode, Inc. and others.
+// © 2017 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
 /*
  *******************************************************************************
@@ -62,6 +62,12 @@ public:
     NoUnit(const NoUnit& other);
 
     /**
+     * Destructor.
+     * @draft ICU 60
+     */
+    virtual ~NoUnit();
+
+    /**
      * Return a polymorphic clone of this object.  The result will
      * have the same class as returned by getDynamicClassID().
      * @draft ICU 60
@@ -85,12 +91,6 @@ public:
      * @draft ICU 60
      */
     static UClassID U_EXPORT2 getStaticClassID();
-
-    /**
-     * Destructor.
-     * @draft ICU 60
-     */
-    virtual ~NoUnit();
 
 private:
     /**
