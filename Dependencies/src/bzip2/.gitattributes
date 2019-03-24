@@ -1,0 +1,16 @@
+* text=auto
+
+*.bz2	binary
+*.c	text diff=cpp
+*.css	text diff=css
+*.h	text diff=cpp
+*.htm	text diff=html
+*.html	text diff=html
+*.pdf	binary
+*.pl	text diff=perl
+*.ps	binary
+*.ref	binary
+*.sh	text eol=lf
+*.txt	text
+*.xml	text
+
