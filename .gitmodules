@@ -12,7 +12,7 @@
 	url = https://github.com/aras-p/glsl-optimizer.git
 [submodule "Dependencies/src/hlsl2glslfork"]
 	path = Dependencies/src/hlsl2glslfork
-	url = https://github.com/aras-p/hlsl2glslfork.git
+	url = https://github.com/feiyunw/hlsl2glslfork.git
 [submodule "Dependencies/src/libpng"]
 	path = Dependencies/src/libpng
 	url = https://github.com/glennrp/libpng.git
@@ -39,7 +39,7 @@
 	url = https://github.com/openssl/openssl.git
 [submodule "Dependencies/src/poco"]
 	path = Dependencies/src/poco
-	url = https://github.com/pocoproject/poco.git
+	url = https://github.com/feiyunw/poco.git
 [submodule "Dependencies/src/tbb"]
 	path = Dependencies/src/tbb
 	url = https://github.com/01org/tbb.git
@@ -51,7 +51,7 @@
 	url = https://git.tukaani.org/xz.git
 [submodule "Dependencies/src/zziplib"]
 	path = Dependencies/src/zziplib
-	url = https://github.com/gdraheim/zziplib.git
+	url = https://github.com/feiyunw/zziplib.git
 [submodule "ogre"]
 	path = ogre
 	url = https://github.com/OGRECave/ogre.git
