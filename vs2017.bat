@@ -113,11 +113,12 @@ xcopy %DEPSRC%xz\src\liblzma\api\*.h %DEPINC% /S /Y
 
 :boost
 :: TODO: warning: Graph library does not contain MPI-based parallel components. note: to enable them, add "using mpi ;" to your user-config.jam
+:: TODO: Boost.Python is incompatible with (b2 --layout=tagged option and BOOST_AUTO_LINK_TAGGED)
 echo ===== Building boost
+set INSTALLDIR=%OGRE_DEPENDENCIES_DIR%
 cd /d %DEPSRC%boost
 cd
 call %DEPSRC%boost\bootstrap.bat vc141
-set INSTALLDIR=%OGRE_DEPENDENCIES_DIR%
 b2.exe --prefix=%INSTALLDIR% --build-dir=%BUILDDIR% -a -d+2 -q -j6 --reconfigure --debug-configuration -sICU_PATH=%DEPSRC%icu4c toolset=msvc-14.1 address-model=64 variant=release link=shared threading=multi runtime-link=shared include=%DEPINC% library-path=%DEPLIB% dll-path=%DEPBIN% cxxflags=/utf-8 optimization=space install
 
 :Cg
@@ -127,9 +128,10 @@ xcopy %DEPSRC%Cg\lib.x64 %DEPLIB% /S /Y
 xcopy %DEPSRC%Cg\include %DEPINC% /S /Y
 
 :openexr
-:: TODO: fix C4819 codepage(936) warning
+setlocal ENABLEEXTENSIONS
 echo ===== Building OpenEXR
 set INSTALLDIR=%OGRE_DEPENDENCIES_DIR%
+set CXXFLAGS=/DBOOST_ALL_DYN_LINK /utf-8 %CXXFLAGS%
 mkdir %BUILDDIR%openexr 1>NUL 2>&1
 cd /d %BUILDDIR%openexr
 cd
@@ -137,13 +139,14 @@ del /f /q CMakeCache.txt 1>NUL 2>&1
 del /f /s /q *.h 1>NUL 2>&1
 %CMAKE% -DBOOST_ROOT=%OGRE_DEPENDENCIES_DIR% -DBOOST_INCLUDEDIR=%DEPINC% -DBOOST_LIBRARYDIR=%DEPLIB% -DBoost_NO_SYSTEM_PATHS=ON -DZLIB_ROOT=%DEPSRC%zlib -DCMAKE_INSTALL_PREFIX=%INSTALLDIR% -DILMBASE_PACKAGE_PREFIX=%INSTALLDIR% -DOPENEXR_NAMESPACE_VERSIONING=OFF -DOPENEXR_PACKAGE_PREFIX=%INSTALLDIR% -G"Visual Studio 15 2017 Win64" %DEPSRC%openexr
 %MSBUILD% %BUILDDIR%openexr\INSTALL.vcxproj /t:Rebuild
+endlocal
 
 :openssl
 echo ===== Building openssl
+set INSTALLDIR=%OGRE_DEPENDENCIES_DIR%
 mkdir %BUILDDIR%openssl 1>NUL 2>&1
 cd /d %BUILDDIR%openssl
 cd
-set INSTALLDIR=%OGRE_DEPENDENCIES_DIR%
 perl %DEPSRC%openssl\Configure threads shared zlib-dynamic no-asm --prefix=%INSTALLDIR% --openssldir=%INSTALLDIR% --with-zlib-include=%DEPINC% --with-zlib-lib=%DEPBIN%zlib1.dll no-deprecated no-tests VC-WIN64A
 nmake install_sw
 
@@ -151,10 +154,10 @@ nmake install_sw
 :: TODO: fix C4819 codepage(936) warning
 setlocal ENABLEEXTENSIONS
 echo ===== Building POCO
-cd /d %DEPSRC%poco
-cd
 set INCLUDE=%INCLUDE%;%DEPSRC%poco\openssl\VS_120\include;%DEPSRC%mysql\include
 set LIB=%LIB%;%DEPSRC%poco\openssl\VS_120\win64\lib\release;%DEPSRC%mysql\lib
+cd /d %DEPSRC%poco
+cd
 call %DEPSRC%poco\buildwin 150 rebuild shared release x64 nosamples notests msbuild
 xcopy %DEPSRC%poco\bin64\*.dll %DEPBIN% /S /Y
 xcopy %DEPSRC%poco\lib64\*.lib %DEPLIB% /S /Y
@@ -192,10 +195,11 @@ copy /Y %DEPSRC%SDL2\VisualC\x64\Release\*.lib %DEPLIB%
 xcopy %DEPSRC%SDL2\include\*.h %DEPINC%\SDL2\ /S /Y
 
 :ogre
-:: TODO: fix C4819 codepage(936) warning
+:: TODO: add zstd
 echo ===== Building OGRE
 set INSTALLDIR=%DP0%install\ogre
 set SWIG_EXECUTABLE=%DEPSRC%swigwin\swig.exe
+set CXXFLAGS=/DBOOST_ALL_DYN_LINK /utf-8 %CXXFLAGS%
 mkdir %INSTALLDIR% 1>NUL 2>&1
 mkdir %BUILDDIR%ogre 1>NUL 2>&1
 cd /d %BUILDDIR%ogre
